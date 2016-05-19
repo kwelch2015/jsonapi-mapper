@@ -59,13 +59,13 @@ export function getDataAttributes(data: Data): any {
   if (isModel(data)) {
     let m: Model = <Model> data;
     // Check if there are virtual attributes to be mapped
-	  if (m.outputVirtuals === true && m.virtuals) {
-	    for (let key in m.virtuals) {
-		    if (m[key]) {
-			    m.attributes[key] = m[key];
-		    }
-	    }
-	  }
+    if (m.outputVirtuals === true && m.virtuals) {
+      for (let key in m.virtuals) {
+        if (m[key]) {
+          m.attributes[key] = m[key];
+        }
+      }
+    }
     return m.attributes;
 
   // Collection Case
